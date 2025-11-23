@@ -1,0 +1,20 @@
+local TextChatService = game:GetService("TextChatService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+wait(1) -- petite pause pour charger le chat
+
+local function send(msg)
+	if TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService then
+		ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents")
+			:WaitForChild("SayMessageRequest")
+			:FireServer(msg, "All")
+	else
+		TextChatService.TextChannels.RBXGeneral:SendAsync(msg)
+	end
+end
+
+-- envoie 5 fois ultra rapidement
+for i = 1, 50 do
+	send("FILS 2 PULT")
+	wait(0.01) -- vitesse ultra rapide (20 millisecondes)
+end
