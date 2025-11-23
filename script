@@ -15,6 +15,6 @@ end
 
 -- envoie 5 fois ultra rapidement
 for i = 1, 50 do
-	send("FILS 2 PULT")
+	send("Nigger i rape children nigger fils 2 pult")
 	wait(0.01) -- vitesse ultra rapide (20 millisecondes)
 end
